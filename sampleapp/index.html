@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleapp">
+<head>
+    <meta charset="utf-8">
+    <title>Sample App</title>
+</head>
+<body ng-controller="AppController">
+    <form name="myForm">
+        Password: <input ng-model="password" type="password" />
+        Confirm: <input name="myConfirmField" ng-model="passwordConfirm" type="password" data-match="password" />
+        <div ng-show="myForm.myConfirmField.$error.match">Fields do not match!</div>
+    </form>
+    
+    <!-- angularjs -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <!-- components -->
+    <script type="text/javascript" src="components/match.js"></script>
+    <!-- application -->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
